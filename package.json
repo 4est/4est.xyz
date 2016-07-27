@@ -1,0 +1,19 @@
+{
+  "name": "4est.xyz",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4est/4est.xyz.git"
+  },
+  "author": "Forrest Peterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4est/4est.xyz/issues"
+  },
+  "homepage": "https://github.com/4est/4est.xyz#readme"
+}
