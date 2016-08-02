@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/4est/4est.xyz/issues"
   },
-  "homepage": "https://github.com/4est/4est.xyz#readme"
+  "homepage": "https://github.com/4est/4est.xyz#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1"
+  }
 }
