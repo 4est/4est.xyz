@@ -5,10 +5,10 @@ var path = require('path');
 
 app.use(express.static(__dirname + '/build'));
 app.use('/src/scripts', express.static(__dirname + '/build/scripts'));
-app.use('/style', express.static(__dirname + '/build/styles'));
+app.use('/src/style', express.static(__dirname + '/build/styles'));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, '/src/index.html'));
+  res.sendFile(path.join(__dirname, '/build/index.html'));
   //res.sendFile('index.html');
 });
 
