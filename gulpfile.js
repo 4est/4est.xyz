@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 //plugins
-
+var gutil = require('gulp-util');
 var jshint = require('gulp-jshint');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
@@ -13,6 +13,11 @@ var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var nodemon = require('gulp-nodemon');
+
+
+var css = [
+    './node_modules/bootstrap/dist/css/bootstrap.css'
+];
 
 //JS hint task
 gulp.task('jshint', function(){
@@ -53,6 +58,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
+  gulp.src(css),
   gulp.src(['./src/styles/*.scss'])
     .pipe(sass({style: 'compressed'}))
     .pipe(concat('styles.css'))
@@ -84,7 +90,9 @@ gulp.task('default', ['imagemin', 'htmlmin', 'scripts', 'styles'], function() {
       env: {
         'NODE_ENV': 'development'
       },
-      ignore: ['/dist']
+      ignore: ['/build']
     })
+    
+    return gutil.log('Gulp is running!')
 });
 
