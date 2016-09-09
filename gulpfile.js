@@ -13,6 +13,7 @@ var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var sass = require('gulp-sass');
 var nodemon = require('gulp-nodemon');
+var streamqueue = require('streamqueue');
 
 
 var css = [
@@ -58,9 +59,10 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-  gulp.src(css),
-  gulp.src(['./src/styles/*.scss'])
-    .pipe(sass({style: 'compressed'}))
+    return streamqueue({objectMode: true},
+      gulp.src(css),
+      gulp.src(['./src/styles/*.scss']).pipe(sass({style: 'compressed'}))
+     )
     .pipe(concat('styles.css'))
     .pipe(autoprefix('last 2 versions','ie 8', 'ie 9'))
     .pipe(minifyCSS())
