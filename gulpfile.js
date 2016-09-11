@@ -63,7 +63,7 @@ gulp.task('styles', function() {
       gulp.src(css),
       gulp.src(['./src/styles/*.scss']).pipe(sass({style: 'compressed'}))
      )
-    .pipe(concat('styles.css'))
+    .pipe(concat('styles.min.css'))
     .pipe(autoprefix('last 2 versions','ie 8', 'ie 9'))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./build/styles/'));
