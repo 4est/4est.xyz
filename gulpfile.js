@@ -20,6 +20,11 @@ var css = [
     './node_modules/bootstrap/dist/css/bootstrap.css'
 ];
 
+var js = [
+    './node_modules/vue-resource/dist/vue-resource.js',
+    './node_modules/vue/dist/vue.min.js'
+]
+
 //JS hint task
 gulp.task('jshint', function(){
     gulp.src('./src/scripts/*.js')
@@ -51,8 +56,10 @@ gulp.task('htmlmin', function(){
 
 //concat all source files, strip debug statements, and minify
 gulp.task('scripts', function() {
-  gulp.src(['./src/scripts/*.js'])
-    .pipe(concat('script.js'))
+  gulp.src([    './node_modules/vue-resource/dist/vue-resource.js',
+                './node_modules/vue/dist/vue.min.js',
+                './src/scripts/*.js'])
+    .pipe(concat('script.min.js'))
     .pipe(stripDebug())
     .pipe(uglify())
     .pipe(gulp.dest('./build/scripts/'));
