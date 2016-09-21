@@ -1,3 +1,14 @@
-h3{
-    color: green;
+html{
+    font-size: 16px;
+
+    #whats-my-name{
+        font-size: 2em;
+        text-align: center;
+        
+        .title{
+            font-size: 13em;
+            font-weight: 700;
+            letter-spacing: .04em;
+        }
+    }
 }
