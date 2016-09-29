@@ -16,13 +16,17 @@ var nodemon = require('gulp-nodemon');
 var streamqueue = require('streamqueue');
 
 
+
 var css = [
     './node_modules/bootstrap/dist/css/bootstrap.css'
 ];
 
 var js = [
     './node_modules/vue-resource/dist/vue-resource.js',
-    './node_modules/vue/dist/vue.min.js'
+    './node_modules/vue/dist/vue.min.js',
+    './node_modules/vue-router/dist/vue-router.min.js',
+    './node_modules/jquery/dist/jquery.min.js'
+
 ]
 
 //JS hint task
@@ -58,18 +62,19 @@ gulp.task('htmlmin', function(){
 gulp.task('scripts', function() {
   gulp.src([    './node_modules/vue-resource/dist/vue-resource.js',
                 './node_modules/vue/dist/vue.min.js',
+                './node_modules/vue-router/dist/vue-router.min.js',
+                './node_modules/jquery/dist/jquery.min.js',
                 './src/scripts/*.js'])
     .pipe(concat('script.min.js'))
     .pipe(stripDebug())
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('./build/scripts/'));
 });
 
 gulp.task('styles', function() {
-    return streamqueue({objectMode: true},
-      gulp.src(css),
-      gulp.src(['./src/styles/*.scss']).pipe(sass({style: 'compressed'}))
-     )
+  gulp.src([ './node_modules/bootstrap/dist/css/bootstrap.css',
+             './src/styles/*.scss'])
+    .pipe(sass({style: 'compressed'}))
     .pipe(concat('styles.min.css'))
     .pipe(autoprefix('last 2 versions','ie 8', 'ie 9'))
     .pipe(minifyCSS())

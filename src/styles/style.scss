@@ -1,14 +1,21 @@
+@import 'base';
+
 html{
     font-size: 16px;
-
-    #whats-my-name{
-        font-size: 2em;
-        text-align: center;
-        
-        .title{
-            font-size: 13em;
-            font-weight: 700;
-            letter-spacing: .04em;
+    body{
+        background: black; 
+        #whats-my-name{
+            font-size: 2em;
+            text-align: center;
+            
+            .title{
+                font-size: 15em;
+                font-weight: 700;
+                letter-spacing: .04em;
+                color: $orange;
+                opacity: .8;
+            }
         }
     }
 }
+

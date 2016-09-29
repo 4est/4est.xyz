@@ -36,6 +36,7 @@
     "gulp-nodemon": "^2.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
-    "streamqueue": "^1.1.1"
+    "streamqueue": "^1.1.1",
+    "vue-router": "^0.7.13"
   }
 }
