@@ -9,6 +9,25 @@
 </head>
 <body>
     <h1>Forrest Peterson</h1>
+    
+    <div class="p p-1"></div>
+    <div class="p p-2"></div>
+    <div class="p p-3"></div>
+    <div class="p p-4"></div>
+    <div class="p p-5"></div>
+    <div class="p p-6"></div>
+    
+    <div class="about">
+      front end developer
+    </div>
+    
+    <div class="xp">
+        fortify
+    </div>
+    
+    <div class="contact">
+        forrest.peterson@outlook.com
+    </div>
 </body>
 </html>
 
@@ -26,17 +45,123 @@
     margin-top: 2.5em;
     font-family: 'Iceland', cursive;
     font-size:10em;
-    animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon 2.5s ease-in-out infinite alternate;
   }
 
-
-
-  @keyframes neon2 {
+  @keyframes neon {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 16px #05275C, 0 0 30px #05275C, 0 0 35px #05275C, 0 0 45px #05275C, 0 0 60px #05275C;
   }
   to {
-    text-shadow: 0 0 3px #fff, 0 0 7px #fff, 0 0 12px #fff, 0 0 16px #05275C, 0 0 24px #05275C, 0 0 29px #05275C, 0 0 35px #05275C, 0 0 50px #05275C;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 9px #fff, 0 0 13px #05275C, 0 0 20px #05275C, 0 0 24px #05275C, 0 0 30px #05275C, 0 0 45px #05275C;
   }
 }
+
+
+@keyframes particleAnimationHorizontal
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
+}
+
+@keyframes particleAnimationVertical
+{
+    from {
+        top: -100px;
+    }
+    to {
+        top: calc( 100% + 100px );
+    }
+}
+
+@keyframes particleAnimationUpward
+{
+    from {
+        top: calc( 100% + 100px );
+    }
+    to {
+        top: -100px;
+    }
+}
+
+
+.p{
+  position:fixed;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:rgba(255,255,255,0.4);
+  position:fixed;
+  
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.p-1::before,.p-3::before,.p-5::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:200px;
+  right:1px;
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.2) 100%); 
+}
+.p-2::before,.p-4::before,.p-6::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:1px;
+  right:0px;
+  bottom:1px;
+  height:100px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,0.3) 100%); 
+}
+.p-4::before{
+  height: 40px;
+}
+.p-5::before{
+  width: 450px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%); 
+}
+.p-6::before{
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(255,255,255,0.3) 100%); 
+  top:1px;
+  height: 80px;
+}
+.p-1{
+  animation-duration:15s;
+  animation-name:particleAnimationHorizontal;
+}
+.p-2{
+  animation-duration:20s;
+  animation-name:particleAnimationVertical;
+  left:80%;
+}
+.p-3{
+  animation-duration:25s;
+  animation-name:particleAnimationHorizontal;
+  top:90%;
+}
+.p-4{
+  animation-duration:35s;
+  animation-name:particleAnimationVertical;
+  left:7%;
+}
+.p-5{
+  animation-duration:10s;
+  animation-name:particleAnimationHorizontal;
+  top:10%;
+}
+.p-6{
+  animation-duration:13s;
+  animation-name:particleAnimationUpward;
+  left:25%;
+}
+
 </style>
