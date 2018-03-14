@@ -9,22 +9,18 @@ body{
     text-align: center;
     overflow-x: hidden;
     height: 260vh;
-
 }
 
 h1{
     margin-top: 2.5em;
     font-family: 'Iceland', cursive;
     font-size: 10em;
-    font-weight: 500;
     letter-spacing: .35em;
     animation: neon 2.5s ease-in-out infinite alternate;
 }
 h2{
-    font-family: 'Orbitron', sans-serif;
     font-family: 'Iceland', cursive;
-    letter-spacing: .35em;
-    font-size:3em;
+    font-size:4em;
     color: #fa7623;
 }
 
@@ -75,10 +71,33 @@ h2{
     background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
     box-shadow: 8px -4px #8c94a8;
     transform: skew(-20deg);
+    text-align: left;
 }
 .about .me{
     transform: skew(20deg);
+    padding: 0 5vw;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". about-title"
+    "picture bio";
 }
+.about-title{
+    grid-area: about-title;
+}
+.picture{
+	width: 200px;
+	height: 200px;
+	background: #ccc;
+    border-radius: 100px;
+    grid-area:picture;
+    justify-self: center;
+}
+.bio{
+    grid-area:bio;
+}
+
 .skills{
     grid-area: skills;
     height: 40vh;
@@ -93,9 +112,6 @@ h2{
 }
 .xp .work{
     transform: skew(-7deg);
-}
-.xp h2{
-    font-size: 4em;
 }
 .projects{
     grid-area: projects;
