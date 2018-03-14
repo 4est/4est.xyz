@@ -19,8 +19,9 @@ h1{
 }
 h2{
     font-family: 'Iceland', cursive;
-    font-size:4em;
+    font-size:6em;
     color: #fa7623;
+    color: #5568fb;
 }
 
 
@@ -54,8 +55,8 @@ h2{
     "header header header header header"
     ". about about about .  "
     ". xp xp xp . "
-    ". skills skills skills .  "
     ". projects projects projects . "
+    ". skills skills skills .  "
     "footer footer footer footer footer";
 }
 .header{
@@ -66,20 +67,17 @@ h2{
 .about{
     grid-area: about;
     height: 80vh;
-    color: #212121;
-    background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
-    box-shadow: 8px -4px #8c94a8;
-    transform: skew(-20deg);
     text-align: left;
 }
 .about .me{
-    transform: skew(20deg);
     padding: 0 5vw;
     display: grid;
-    grid-template-columns: 25% 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 600px 1fr;
     grid-template-areas: 
-    ". about-title"
+    ". ."
+    "picture ."
+    "picture about-title"
     "picture bio";
 }
 .about-title{
@@ -102,61 +100,71 @@ h2{
     margin: -20px;
     grid-area: xp;
     height: 80vh;
-    transform: skew(7deg);
     color: #212121;
-    background-color: #bfc5c4;
+    background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
+    box-shadow: 8px -4px #8c94a8;
+    transform: skew(-15deg);
+
+
+
 }
 .xp .work{
-    transform: skew(-7deg);
+    transform: skew(15deg);
 }
 .projects{
     grid-area: projects;
     height: 80vh;
     color: #212121;
-    background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
-    box-shadow: 8px -4px #8c94a8;
-    transform: skew(-20deg);
+    transform: skew(7deg);
+    color: #212121;
+    background-color: #eaeceb;
 }
-
+.projects .pets{
+    transform: skew(-7deg);
+}
 .skills{
     grid-area: skills;
     height: 80vh;
 }
 .skills-container{
-    padding: 0 5vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "skills-title html html html html"
-    "skills-title css css css css"
-    "skills-title js js js js"
-    "skills-title backend backend backend backend"
-    "skills-title tools tools tools tools"
-    "skills-title other other other other";
+    ". .  skills-title skills-title . ."
+    "html css js backend tools other"
+    "html css js backend tools other"
+    "html css js backend tools other"
+    "html css js backend tools other"
+    "html css js backend tools other";
 }
 .skills-title {
-    transform: rotate(300deg); /* Equal to rotateZ(45deg) */
-    font-size: 12em;
+    font-size: 7em;
     grid-area: skills-title;
   }
   .html{
       grid-area: html;
+
   }
   .css{
     grid-area: css;
+
 }
 .js{
     grid-area: js;
+
 }
 .backend{
     grid-area: backend;
+
 }
 .tools{
     grid-area: tools;
+
 }
 .other{
     grid-area: other;
+
 }
 
 .footer{
