@@ -3,7 +3,7 @@
 body{
     background-image: linear-gradient(273deg,#010813,#000014);
     font-family: 'Open Sans', sans-serif; 
-    background-color: #000014;
+    background-color: #010813;
     color: #FFF;
     font-size:16px;
     text-align: center;
@@ -15,14 +15,40 @@ body{
 h1{
     margin-top: 2.5em;
     font-family: 'Iceland', cursive;
-    font-size:9em;
+    font-size: 10em;
+    font-weight: 500;
+    letter-spacing: .35em;
     animation: neon 2.5s ease-in-out infinite alternate;
 }
 h2{
-    
-    font-size:2em;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Iceland', cursive;
+    letter-spacing: .35em;
+    font-size:3em;
     color: #fa7623;
 }
+
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: #010813;
+}
+::-webkit-scrollbar-thumb {
+    background: #010813; 
+    background-image: linear-gradient(320deg,
+    transparent 2%,
+    #C5CCCB 2%,
+    #C5CCCB 50%,
+    #C5CCCB 50%,
+    #C5CCCB 98%,
+    transparent 98%,
+    transparent)
+
+}
+
+
 /*CSS GRID*/
 
 .container{
@@ -39,7 +65,7 @@ h2{
 }
 .header{
     grid-area: header;
-    height: 100vh;
+    height: 110vh;
 }
 
 .about{
@@ -69,11 +95,15 @@ h2{
     transform: skew(-7deg);
 }
 .xp h2{
-    font-size: 3em;
+    font-size: 4em;
 }
 .projects{
     grid-area: projects;
     height: 50vh;
+    color: #212121;
+    background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
+    box-shadow: 8px -4px #8c94a8;
+    transform: skew(-20deg);
 }
 .footer{
     grid-area: footer;
@@ -95,44 +125,45 @@ h2{
     top:50px;
     width:1px;
     height:1px;
-    background-color:rgba(255, 255, 255, 0.1);
+    background-color:rgba(0, 162, 255, 0.1);
 
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.p-1::before,.p-3::before,.p-5::before{
+.p-1::before,.p-3::before,.p-5::before,.p-7::before,.p-9::before,.p-11::before{
     position:absolute;
     display:block;
     content:"";
-    width:200px;
+    width:700px;
     right:1px;
     top:0px;
     height:1px;
-    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.1) 100%); 
+    background: linear-gradient(to right, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
 }
-.p-2::before,.p-4::before,.p-6::before{
+.p-2::before,.p-4::before,.p-6::before,.p-8::before,.p-10::before,.p-12::before{
     position:absolute;
     display:block;
     content:"";
     width:1px;
     right:0px;
     bottom:1px;
-    height:100px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,0.2) 100%); 
+    height:800px;
+    background: linear-gradient(to bottom,transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
 }
 .p-4::before{
-    height: 40px;
+    height: 400px;
 }
 .p-5::before{
-    width: 450px;
+    width: 950px;
     height: 2px;
-    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.3) 100%); 
+    background: linear-gradient(to right, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
 }
-.p-6::before{
-    background: linear-gradient(to top, rgba(0,0,0,0) 0%,rgba(255,255,255,0.2) 100%); 
+.p-6::before,.p-12::before{
+    background: linear-gradient(to top, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
     top:1px;
-    height: 80px;
+    height: 400px;
 }
+
 .p-1{
     animation-duration:15s;
     animation-name:particleAnimationHorizontal;
@@ -161,6 +192,37 @@ h2{
     animation-duration:13s;
     animation-name:particleAnimationUpward;
     left:25%;
+}
+.p-7{
+    animation-duration:15s;
+    animation-name:particleAnimationHorizontal;
+    top:84%;
+}
+.p-8{
+    animation-duration:19s;
+    animation-name:particleAnimationVertical;
+    left:65%;
+}
+.p-9{
+    animation-duration:13s;
+    animation-name:particleAnimationHorizontal;
+    top:23%;
+}
+.p-10{
+    animation-duration:21s;
+    animation-name:particleAnimationVertical;
+    left:3%;
+}
+.p-11{
+    animation-duration:11s;
+    animation-name:particleAnimationHorizontal;
+    top:15%;
+}
+
+.p-12{
+    animation-duration:7s;
+    animation-name:particleAnimationUpward;
+    left:55%;
 }
 .p-fiber{
     position:relative;
