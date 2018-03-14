@@ -35,20 +35,20 @@ h1{
 
 .about{
     grid-area: about;
-    height: 100vh;
+    height: 50vh;
 
 }
 .xp{
     grid-area: xp;
-    height: 100vh;
+    height: 50vh;
 }
 .contact{
     grid-area: contact;
-    height: 100vh;
+    height: 50vh;
 }
 .footer{
     grid-area: footer;
-    height: 100vh;
+    height: 10vh;
 }
 
 /*Particles*/
@@ -187,28 +187,28 @@ h1{
 @keyframes fiber
 {
     0% {
-        top: -100px;
+        top: 75vh;
         left: -100px;
     }
     16.7% {
-        top: 100vh;
+        top: 90vh;
         left: calc( 20% + 100px );
     }
     33.4% {
-        top: 180vh;
+        top: 148vh;
         left: calc( 20% + 100px );
     }
     50.1% {
-        top: 180vh;
+        top: 148vh;
         left: calc( 75% + 100px );
         
     }
     66.8% {
-        top: 260vh;
+        top: 198vh;
         left: calc( 75% + 100px );
     }
     83.5% {
-        top: 340vh;
+        top: 248vh;
         left: calc( 20% + 100px );
     }
     100% {
