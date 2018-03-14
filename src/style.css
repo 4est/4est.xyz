@@ -8,7 +8,6 @@ body{
     font-size:16px;
     text-align: center;
     overflow-x: hidden;
-    height: 260vh;
 }
 
 h1{
@@ -61,12 +60,12 @@ h2{
 }
 .header{
     grid-area: header;
-    height: 110vh;
+    height: 120vh;
 }
 
 .about{
     grid-area: about;
-    height: 50vh;
+    height: 80vh;
     color: #212121;
     background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
     box-shadow: 8px -4px #8c94a8;
@@ -98,14 +97,11 @@ h2{
     grid-area:bio;
 }
 
-.skills{
-    grid-area: skills;
-    height: 40vh;
-}
+
 .xp{
     margin: -20px;
     grid-area: xp;
-    height: 60vh;
+    height: 80vh;
     transform: skew(7deg);
     color: #212121;
     background-color: #bfc5c4;
@@ -115,12 +111,54 @@ h2{
 }
 .projects{
     grid-area: projects;
-    height: 50vh;
+    height: 80vh;
     color: #212121;
     background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
     box-shadow: 8px -4px #8c94a8;
     transform: skew(-20deg);
 }
+
+.skills{
+    grid-area: skills;
+    height: 80vh;
+}
+.skills-container{
+    padding: 0 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "skills-title html html html html"
+    "skills-title css css css css"
+    "skills-title js js js js"
+    "skills-title backend backend backend backend"
+    "skills-title tools tools tools tools"
+    "skills-title other other other other";
+}
+.skills-title {
+    transform: rotate(300deg); /* Equal to rotateZ(45deg) */
+    font-size: 12em;
+    grid-area: skills-title;
+  }
+  .html{
+      grid-area: html;
+  }
+  .css{
+    grid-area: css;
+}
+.js{
+    grid-area: js;
+}
+.backend{
+    grid-area: backend;
+}
+.tools{
+    grid-area: tools;
+}
+.other{
+    grid-area: other;
+}
+
 .footer{
     grid-area: footer;
     height: 10vh;
