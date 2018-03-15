@@ -23,7 +23,9 @@ h2{
     color: #fa7623;
     color: #5568fb;
 }
-
+.bold{
+    color:#fa7623;
+}
 
 ::-webkit-scrollbar {
     width: 6px;
@@ -33,13 +35,13 @@ h2{
 }
 ::-webkit-scrollbar-thumb {
     background: #010813; 
-    background-image: linear-gradient(320deg,
-    transparent 2%,
-    #C5CCCB 2%,
+    background-image: linear-gradient(45deg,
+    transparent 5%,
+    #C5CCCB 5%,
     #C5CCCB 50%,
     #C5CCCB 50%,
-    #C5CCCB 98%,
-    transparent 98%,
+    #C5CCCB 95%,
+    transparent 95%,
     transparent)
 
 }
@@ -61,7 +63,7 @@ h2{
 }
 .header{
     grid-area: header;
-    height: 120vh;
+    height: 80vh;
 }
 
 .about{
@@ -73,10 +75,10 @@ h2{
     padding: 0 5vw;
     display: grid;
     grid-template-columns: 50% 1fr;
-    grid-template-rows: 600px 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr;
     grid-template-areas: 
     ". ."
-    "picture ."
+    ". ."
     "picture about-title"
     "picture bio";
 }
@@ -102,7 +104,7 @@ h2{
     height: 80vh;
     color: #212121;
     background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
-    box-shadow: 8px -4px #8c94a8;
+    box-shadow: 8px -4px #131981;
     transform: skew(-15deg);
 
 
@@ -117,6 +119,7 @@ h2{
     color: #212121;
     transform: skew(7deg);
     color: #212121;
+    box-shadow: -5px 7px #252ba2;
     background-color: #eaeceb;
 }
 .projects .pets{
@@ -315,11 +318,11 @@ h2{
 @keyframes neon 
 {
     from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 16px #05275C, 0 0 30px #05275C, 0 0 35px #05275C, 0 0 45px #05275C, 0 0 60px #05275C;
-    }
-    to {
-      text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 9px #fff, 0 0 13px #05275C, 0 0 20px #05275C, 0 0 24px #05275C, 0 0 30px #05275C, 0 0 45px #05275C;
-    }
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 16px #55bbfb, 0 0 30px #55bbfb, 0 0 35px #55bbfb, 0 0 45px #55bbfb, 0 0 60px #55bbfb;
+      }
+      to {
+        text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 13px #55bbfb, 0 0 20px #55bbfb, 0 0 24px #55bbfb, 0 0 30px #55bbfb, 0 0 45px #55bbfb;
+      }
 }
     
     
