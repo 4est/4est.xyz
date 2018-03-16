@@ -8,11 +8,15 @@
     "node-sass": "^4.7.2",
     "nodemon": "^1.17.2"
   },
-  "devDependencies": {},
-  "config" : { "port" : "8080" },
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  },
+  "config": {
+    "port": "8080"
+  },
   "scripts": {
     "start": "node server.js",
-    "build-css": "node-sass --include-path scss src/style.scss   public/style.css",
+    "build-css": "node-sass --include-path scss src/style.scss   dist/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
