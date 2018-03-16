@@ -9,9 +9,11 @@
     "nodemon": "^1.17.2"
   },
   "devDependencies": {},
+  "config" : { "port" : "8080" },
   "scripts": {
-    "build-css": "./bin/build-css",
-    "watch-css": "./bin/watch-css",
+    "start": "node server.js",
+    "build-css": "node-sass --include-path scss src/style.scss   public/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
