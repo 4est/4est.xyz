@@ -1,49 +1,38 @@
 /*General*/
 
 body{
-    background-image: linear-gradient(273deg,#010813,#000014);
-    font-family: 'Open Sans', sans-serif; 
-    background-color: #010813;
-    color: #FFF;
+    background-image: linear-gradient(300deg,#e7eeed,#f8f8f8 60%);
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f8f8;
+    color: #212121;
     font-size:16px;
     text-align: center;
     overflow-x: hidden;
 }
 
 h1{
-    margin-top: 2.5em;
-    font-family: 'Iceland', cursive;
-    font-size: 10em;
-    letter-spacing: .35em;
-    animation: neon 2.5s ease-in-out infinite alternate;
+    margin-top: 1em;
+    font-family: 'Cinzel', serif;
+    font-size: 5em;
+    letter-spacing: .15em;
 }
 h2{
-    font-family: 'Iceland', cursive;
-    font-size:6em;
-    color: #fa7623;
-    color: #5568fb;
+    font-family: 'Cinzel', serif;
+    font-size:4em;
+    color: #212121;
 }
 .bold{
     color:#fa7623;
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background-color: #010813;
+    background-color: #dfdfdf;
 }
 ::-webkit-scrollbar-thumb {
-    background: #010813; 
-    background-image: linear-gradient(45deg,
-    transparent 5%,
-    #C5CCCB 5%,
-    #C5CCCB 50%,
-    #C5CCCB 50%,
-    #C5CCCB 95%,
-    transparent 95%,
-    transparent)
-
+    background: #212121; 
 }
 
 
@@ -63,22 +52,17 @@ h2{
 }
 .header{
     grid-area: header;
-    height: 80vh;
+    height: 100vh;
 }
 
 .about{
     grid-area: about;
-    height: 80vh;
+    height: 100vh;
     text-align: left;
-}
-.about .me{
     padding: 0 5vw;
     display: grid;
-    grid-template-columns: 50% 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    ". ."
-    ". ."
     "picture about-title"
     "picture bio";
 }
@@ -101,33 +85,15 @@ h2{
 .xp{
     margin: -20px;
     grid-area: xp;
-    height: 80vh;
-    color: #212121;
-    background: linear-gradient(173deg,#e7eeed,#C5CCCB); 
-    box-shadow: 8px -4px #131981;
-    transform: skew(-15deg);
-
-
-
-}
-.xp .work{
-    transform: skew(15deg);
+    height: 100vh;
 }
 .projects{
     grid-area: projects;
-    height: 80vh;
-    color: #212121;
-    transform: skew(7deg);
-    color: #212121;
-    box-shadow: -5px 7px #252ba2;
-    background-color: #eaeceb;
-}
-.projects .pets{
-    transform: skew(-7deg);
+    height: 100vh;
 }
 .skills{
     grid-area: skills;
-    height: 80vh;
+    height: 100vh;
 }
 .skills-container{
     display: grid;
@@ -142,7 +108,6 @@ h2{
     "html css js backend tools other";
 }
 .skills-title {
-    font-size: 7em;
     grid-area: skills-title;
   }
   .html{
@@ -175,276 +140,18 @@ h2{
     height: 10vh;
 }
 
-/*Particles*/
-.fiber-line{
-  position:fixed;
-  left:0px;
-  top:50px;
-  width:100%;
-  height:1px;
-  background-color:#99833d;
-}
-.p{
-    position:fixed;
-    left:0px;
-    top:50px;
-    width:1px;
-    height:1px;
-    background-color:rgba(0, 162, 255, 0.1);
-
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-.p-1::before,.p-3::before,.p-5::before,.p-7::before,.p-9::before,.p-11::before{
-    position:absolute;
-    display:block;
-    content:"";
-    width:700px;
-    right:1px;
-    top:0px;
-    height:1px;
-    background: linear-gradient(to right, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
-}
-.p-2::before,.p-4::before,.p-6::before,.p-8::before,.p-10::before,.p-12::before{
-    position:absolute;
-    display:block;
-    content:"";
-    width:1px;
-    right:0px;
-    bottom:1px;
-    height:800px;
-    background: linear-gradient(to bottom,transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
-}
-.p-4::before{
-    height: 400px;
-}
-.p-5::before{
-    width: 950px;
-    height: 2px;
-    background: linear-gradient(to right, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
-}
-.p-6::before,.p-12::before{
-    background: linear-gradient(to top, transparent 0%,rgba(0, 162, 255, 0.1) 100%); 
-    top:1px;
-    height: 400px;
-}
-
-.p-1{
-    animation-duration:15s;
-    animation-name:particleAnimationHorizontal;
-}
-.p-2{
-    animation-duration:20s;
-    animation-name:particleAnimationVertical;
-    left:80%;
-}
-.p-3{
-    animation-duration:25s;
-    animation-name:particleAnimationHorizontal;
-    top:90%;
-}
-.p-4{
-    animation-duration:35s;
-    animation-name:particleAnimationVertical;
-    left:7%;
-}
-.p-5{
-    animation-duration:10s;
-    animation-name:particleAnimationHorizontal;
-    top:10%;
-}
-.p-6{
-    animation-duration:13s;
-    animation-name:particleAnimationUpward;
-    left:25%;
-}
-.p-7{
-    animation-duration:15s;
-    animation-name:particleAnimationHorizontal;
-    top:84%;
-}
-.p-8{
-    animation-duration:19s;
-    animation-name:particleAnimationVertical;
-    left:65%;
-}
-.p-9{
-    animation-duration:13s;
-    animation-name:particleAnimationHorizontal;
-    top:23%;
-}
-.p-10{
-    animation-duration:21s;
-    animation-name:particleAnimationVertical;
-    left:3%;
-}
-.p-11{
-    animation-duration:11s;
-    animation-name:particleAnimationHorizontal;
-    top:15%;
-}
-
-.p-12{
-    animation-duration:7s;
-    animation-name:particleAnimationUpward;
-    left:55%;
-}
-.p-fiber{
-    position:relative;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    width:2px;
-    height:2px;
-    box-shadow: 0 0 5px #00ddff, 0 0 10px #00ddff, 0 0 15px #00ddff, 0 0 16px #05275C, 0 0 30px #05275C, 0 0 35px #05275C, 0 0 45px #05275C, 0 0 60px #05275C;
-    background-color:#FFF;
-
-}
-.f-1{
-    animation-duration:15s;
-    animation-name:fiber-1;
-}
-.f-2{
-    animation-duration:12s;
-    animation-name:fiber-2;
-}
-.f-3{
-    animation-duration:5s;
-    animation-name:fiber-3;
-}
+.side-nav{
+    display: flex; 
+    list-style-type:none;
+    flex-direction: column;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    position: fixed;
+    bottom: 0;
 
 
-/*Animations*/
-
-@keyframes neon 
-{
-    from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 16px #55bbfb, 0 0 30px #55bbfb, 0 0 35px #55bbfb, 0 0 45px #55bbfb, 0 0 60px #55bbfb;
-      }
-      to {
-        text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 13px #55bbfb, 0 0 20px #55bbfb, 0 0 24px #55bbfb, 0 0 30px #55bbfb, 0 0 45px #55bbfb;
-      }
 }
+.side-nav li{
+    padding: 0 10%;
     
-    
-@keyframes particleAnimationHorizontal
-{
-    from {
-        left: -100px;
-        
-    }
-    to {
-        left: 110vw;
-
-    }
-}
-
-@keyframes particleAnimationVertical
-{
-    from {
-        top: -100px;
-    }
-    to {
-        top:  110vh ;
-    }
-}
-
-@keyframes particleAnimationUpward
-{
-    from {
-        top: 110vh;
-    }
-    to {
-        top: -100px;
-    }
-}
-
-@keyframes fiber-1
-{
-    0% {
-        top: 75vh;
-        left: -100px;
-    }
-    16.7% {
-        top: 90vh;
-        left: 15vw
-    }
-    33.4% {
-        top: 148vh;
-        left: 15vw
-    }
-    50.1% {
-        top: 148vh;
-        left: 85vw
-        
-    }
-    66.8% {
-        top: 198vh;
-        left: 85vw
-    }
-    83.5% {
-        top: 255vh;
-        left: calc( 100% + 100px );
-    }
-    100% {
-        top: calc( 100% + 100px );
-        left: calc( 100% + 100px );
-    }
-}
-
-@keyframes fiber-2
-{
-    0% {
-        top: 125vh;
-        left: 100vw;
-    }
-    25% {
-        top: 148vh;
-        left: 80vw;
-    }
-    35%{
-        top: 170vh;
-        left: 80vw;
-    }
-    50% {
-        top: 190vh;
-        left: 80vw;
-        
-    }
-    65%{
-        top: 210vh;
-        left: 85vw;
-    }
-    75% {
-        top: 235vh;
-        left: 85vw;
-    }
-    100% {
-        top: calc( 100% + 100px );
-        left: 80vw;
-    }
-}
-@keyframes fiber-3
-{
-    0% {
-        top: 200vh;
-        left: -100px;
-    }
-    
-    50.1% {
-        top: 220vh;
-        left: 15vw;
-        
-    }
-    66.8% {
-        top: 240vh;
-        left: 15vw;
-    }
-    83.5% {
-        top: 248vh;
-        left: 25vw;
-    }
-    100% {
-        top: calc( 100% + 100px );
-        left: 25vw;
-    }
 }
