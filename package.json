@@ -1,0 +1,24 @@
+{
+  "name": "4est.xyz",
+  "version": "1.0.0",
+  "description": "Hey I'm Forrest, here's my site\r http://4est.xyz",
+  "main": "index.html",
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4est/4est.xyz.git"
+  },
+  "author": "Forrest Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4est/4est.xyz/issues"
+  },
+  "homepage": "https://github.com/4est/4est.xyz#readme"
+}
