@@ -1,13 +1,23 @@
-var express = require('express');
-var app = express();
+import express from 'express';
+import webpack from 'webpack';
+import path from 'path';
+import config from '../webpack.config.dev';
+import open from 'open';
 
-app.use("/static", express.static(__dirname + 'public'));
+/* eslint-disable no-console */
 
-app.get("/", function (req, res) {
-  res.sendfile('src/index.html');
+const port = process.env.npm_package_config_port || 3000;
+const app = express();
+const compiler = webpack(config);
+
+app.get('*', function(req, res) {
+  res.sendFile(path.join( __dirname, '../src/index.html'));
 });
 
-var port = process.env.npm_package_config_port || "1337";
-app.listen(port, function() {
-  console.log('App listening on port :' + port);
+app.listen(port, function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    open(`http://localhost:${port}`);
+  }
 });
