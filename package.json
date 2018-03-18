@@ -17,7 +17,8 @@
     "mocha": "^5.0.4",
     "nodemon": "^1.17.2",
     "open": "0.0.5",
-    "webpack": "^4.1.1"
+    "webpack": "^4.1.1",
+    "webpack-dev-middleware": "^3.0.1"
   },
   "config": {
     "port": "8080"
