@@ -1,14 +1,13 @@
 import express from 'express';
 import webpack from 'webpack';
 import path from 'path';
-import config from '../webpack.config';
+import open from 'open';
 
 
 const port = process.env.npm_package_config_port || 3000;
 const app = express();
-const compiler = webpack(config);
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
   res.sendFile(path.join( __dirname, '../src/index.html'));
 });
 
