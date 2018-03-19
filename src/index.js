@@ -1,3 +1,5 @@
+import '../src/style.scss';
+
 
 console.log("ITS WORKING! ITS WORKING!");
 // function about() {
