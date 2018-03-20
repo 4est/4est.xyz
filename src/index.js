@@ -7,16 +7,16 @@ console.log("ITS WORKING! ITS WORKING!");
 //     element.classList.remove("hidden");
 // }
 
-// (function() {
-//     var body = document.querySelector('body'),
-//     menu = document.querySelector('#menu'),
-//     menulink = document.querySelector('.menu-link');
+(function() {
+    var body = document.querySelector('body'),
+    menu = document.querySelector('#menu'),
+    menulink = document.querySelector('.menu-link');
  
-//      body.classList.add('js');
+     body.classList.add('js');
 
-//      menulink.addEventListener('click', function(e){
-//      menu.classList.toggle('active');
-//      e.preventDefault();
-//    });
+     menulink.addEventListener('click', function(e){
+     menu.classList.toggle('active');
+     e.preventDefault();
+   });
 
-// })();
+})();
