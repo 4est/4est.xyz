@@ -25,15 +25,10 @@ body{
     overflow-x: hidden;
 
 
-    h1{
-        margin-top: 1em;
-        font-family: 'Cinzel', serif;
-        font-size: 7em;
-        letter-spacing: .13em;
-        color: $black-1;
-    }
     h2{
         font-family: 'Cinzel', serif;
+        font-family: 'Kelly Slab', cursive;
+        font-family: 'Atomic Age', cursive;
         font-size:5em;
         letter-spacing: .1em;
     }
@@ -73,6 +68,26 @@ body{
 .header{
     grid-area: header;
     height: 100vh;
+    
+    h1{
+        margin-top: 1em;
+        font-family: 'Cinzel', serif;
+        font-family: 'Kelly Slab', cursive;
+        font-family: 'Bungee Inline', cursive;
+        font-family: 'Holtwood One SC', serif;
+        font-family: 'Atomic Age', cursive;
+        font-family: 'Marcellus SC', serif;
+        font-size: 7em;
+        letter-spacing: .13em;
+        background-image:  linear-gradient(217deg, rgba(74,18,16,.8), rgba(74,18,16,0) 70.71%),
+            linear-gradient(127deg, rgba(159, 163, 96, 0.8), rgba(159, 163, 96,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+        
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
 }
 
 .about{
@@ -165,6 +180,7 @@ body{
     list-style-type:none;
     flex-direction: column;
     font-family: 'Cinzel', serif;
+    font-family: 'Kelly Slab', cursive;
     font-size: 5em;
     position: fixed;
     bottom: 0;
