@@ -7,11 +7,14 @@ $white-2: #e7eeed;
 $white-3: #fbfbfb;
 $gold-color: #e3dac9;
 $red-color: #a66256;
+$red-2: #e53a3a; 
 $green-color: #5a8f77;
+
+$blue-1: #193b73;
 /*General*/
 
-$background-color: $black-1;
-$font-color: $white-1;
+$background-color: $white-1;
+$font-color: $black-1;
 
 body{
     // background-image: linear-gradient(300deg,,#f8f8f8 60%);
@@ -28,9 +31,6 @@ body{
         font-family: 'Cinzel', serif;
         font-size: 7em;
         letter-spacing: .15em;
-        text-shadow: 
-        4px 4px 0px $black-3, 
-        7px 7px 0px rgba(0, 0, 0, 0.2);
     }
     h2{
         font-family: 'Cinzel', serif;
