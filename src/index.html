@@ -4,38 +4,37 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway|Kelly+Slab|Bungee+Inline|Holtwood+One+SC|Atomic+Age|Marcellus+SC|Nova+Flat" rel="stylesheet">
   <title>Forrest Peterson</title>
 </head>
 
 <body>
-  <div class="container">
-  <div class="header">
-      <div class="logo"></h1>
-      <ul class="menu">
-        <li class="I">I</li>
-        <l class="II">II</li>
-        <li class="III">III</li>
-        <li class="IV">IV</li>
-      </ul>
-  </div>
+  <section id="header" class="active-page">
+    <div class="logo"></div>
+    <div class="menu">
+        <button id="I">I</button>
+        <button id="II">II</button>
+        <button id="III">III</button>
+        <button id="IV">IV</button>
+    </div>
+</section>
 
-  <div class="about">
+
+  <section id="about">
         <h2 class="about-title">About Me</h2>
         <div class="picture"></div>
         <p class="bio">
             I'm a full stack software engineer with a passion for creating applications that are practical, durable, and beautiful.
         </p>
-  </div>
+  </section>
 
-  <div class="xp">
+  <section id="xp">
         <h2>Experience</h2>
         Software Engineer - Fortify on Demand
 
         Georgia Institute of Technology - Computer Science 2015
-  </div>
+  </section>
 
-  <div class="projects">
+  <section id="projects">
     <div class="pets">
         <h2>Personal Projects</h2>
         Shoot the hootch Alexa App
@@ -43,10 +42,9 @@
         Q# 
     </div>
 
-    </div>
+    </section>
 
-<div class="skills">
-    <div class="skills-container">
+<section id="skills">
         <h2 class="skills-title">Skills</h2>
         <div class="html">HTML5, JSX, Jekyll</div>
         <div class="css">CSS3, SASS, LESS, BOOTSRAP</div>
@@ -54,15 +52,59 @@
         <div class="backend">c#, java, kotlin</div>
         <div class="tools">webpack, gulp, grunt, npm, bower</div>
         <div class="other">github,gitlab,git,vs, intelliJ, alexa</div>
-    </div>
-</div>
-  <div class="footer">
+</section>
+  <div id="footer">
     forrest.peterson@outlook.com
     @4est
     linkedin
     </div>
-</div>
 <script src="/bundle.js"></script>
 </body>
 
 </html>
+
+
+<!-- <div class='easytransitions'>
+        
+          <div class='easytransitions_transition'>
+            <div class='div easytransitions_transition__part-1 none'></div>
+            <div class='div easytransitions_transition__part-2 none'></div>
+            <div class='div easytransitions_transition__part-3 none'></div>
+            <div class='div easytransitions_transition__part-4 none'></div>
+          </div>
+        
+          <div class='easytransitions_navigation'>
+            <div class='easytransitions_navigation__left'>
+              <i class='icon ion-arrow-left-c'></i>
+            </div>
+            <div class='easytransitions_navigation__right'>
+              <i class='icon ion-arrow-right-c'></i>
+            </div>
+          </div>
+        
+          <section class='active_slide' data-transition='split_diagonal'>
+            <div class='center'>
+              <h1>Super Easy Slider/Page Transitions</h1>
+              <h2>Go ahead, click the lil arrows</h2>
+            </div>
+          </section>
+          <section data-transition='split_diagonal'>
+            <div class='center'>
+              <h1>You see that?</h1>
+              <span>%section{'data-transition' => 'split_diagonal'}</span>
+            </div>
+          </section>
+          <section data-transition='split_diagonal_alt'>
+            <div class='center'>
+              <h1>So smooth!</h1>
+              <span>%section{'data-transition' => 'split_diagonal_alt'}</span>
+            </div>
+          </section>
+          <section data-transition='split_diamond'>
+            <div class='center'>
+              <h1>Such swag!</h1>
+              <span>%section{'data-transition' => 'split_diamond'}</span>
+            </div>
+          </section>
+</div> -->
+

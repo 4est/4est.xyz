@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel|Raleway|Nova+Square|Oswald);
+
 $black-1: #212121;
 $black-2: #2e2e2e;
 $black-3: #3b3b3b;
@@ -6,7 +8,7 @@ $white-1: #f8f8f8;
 $white-2: #e7eeed;
 $white-3: #fbfbfb;
 $gold-color: #e3dac9;
-$red-color: #a66256;
+$red-color: #b7232b;
 $red-2: #e53a3a; 
 $green-color: #5a8f77;
 
@@ -17,23 +19,20 @@ $background-color: $white-1;
 $font-color: $black-1;
 
 body{
-    background-image: linear-gradient(300deg,$white-1,$white-2 60%);
+    background-image: linear-gradient(300deg,$white-1,$white-3 60%);
     font-family: 'Raleway', sans-serif;
     color: $font-color;
     font-size:16px;
     text-align: center;
     overflow-x: hidden;
+    margin: 0;
 
-    .logo{
-        background: url('logo.svg') no-repeat center center;
-        width: 33%;
-        height: 33%;
-    }
+
 
     h2{
+        font-family: 'Oswald', sans-serif;
+        font-family: 'Nova Square', cursive;
         font-family: 'Cinzel', serif;
-        font-family: 'Kelly Slab', cursive;
-        font-family: 'Atomic Age', cursive;
         font-size:5em;
         letter-spacing: .1em;
     }
@@ -58,80 +57,62 @@ body{
 
 /*CSS GRID*/
 
-.container{
-    display: grid;
-    grid-template-columns: 12% 1fr 1fr 1fr 12%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header header"
-    ". about about about .  "
-    ". xp xp xp . "
-    ". projects projects projects . "
-    ". skills skills skills .  "
-    "footer footer footer footer footer";
-}
-.header{
-    grid-area: header;
+
+#header{
     height: 100vh;
-    
-    h1{
-        margin-top: 1em;
-        font-family: 'Cinzel', serif;
-        font-family: 'Kelly Slab', cursive;
-        font-family: 'Bungee Inline', cursive;
-        font-family: 'Holtwood One SC', serif;
-        font-family: 'Atomic Age', cursive;
-        font-family: 'Marcellus SC', serif;
-        font-size: 7em;
-        letter-spacing: .13em;
-        color: $black-1;
-        text-shadow: 2px 2px $black-4;
+    display: none;
+
+    .logo{
+        background: url('logo.svg') no-repeat center center;
+        height: 60%;
     }
 
 }
 
-.about{
-    grid-area: about;
+#about{
     height: 100vh;
     text-align: left;
     padding: 0 5vw;
     display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "picture about-title"
     "picture bio";
-}
-.about-title{
-    grid-area: about-title;
-}
-.picture{
-	width: 200px;
-	height: 200px;
-	background: #ccc;
-    border-radius: 100px;
-    grid-area:picture;
-    justify-self: center;
-}
-.bio{
-    grid-area:bio;
+
+    .about-title{
+        grid-area: about-title;
+    }
+    .picture{
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        border-radius: 100px;
+        grid-area:picture;
+        justify-self: center;
+    }
+    .bio{
+        grid-area:bio;
+    }
 }
 
 
-.xp{
+
+#xp{
     margin: -20px;
-    grid-area: xp;
     height: 100vh;
+    display: none;
 }
-.projects{
-    grid-area: projects;
+
+#projects{
     height: 100vh;
+    display: none;
 }
-.skills{
-    grid-area: skills;
+
+#skills{
     height: 100vh;
-}
-.skills-container{
     display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -141,51 +122,55 @@ body{
     "html css js backend tools other"
     "html css js backend tools other"
     "html css js backend tools other";
+
+    div{
+        margin: 10px;
+        box-shadow: 0px 4px 10px #474747;
+    }
+
+    .skills-title {
+        grid-area: skills-title;
+      }
+      .html{
+          grid-area: html;
+      }
+      .css{
+        grid-area: css;
+    
+    }
+    .js{
+        grid-area: js;
+    
+    }
+    .backend{
+        grid-area: backend;
+    
+    }
+    .tools{
+        grid-area: tools;
+    }
+    .other{
+        grid-area: other;
+    }
 }
-.skills-title {
-    grid-area: skills-title;
-  }
-  .html{
-      grid-area: html;
+.active-page{
+    display: block !important;
+ }
 
-  }
-  .css{
-    grid-area: css;
 
-}
-.js{
-    grid-area: js;
-
-}
-.backend{
-    grid-area: backend;
-
-}
-.tools{
-    grid-area: tools;
-
-}
-.other{
-    grid-area: other;
-
-}
-
-.footer{
+#footer{
     grid-area: footer;
+    display: none;
     height: 10vh;
 }
 
 .menu{
     display: flex; 
-    list-style-type:none;
-    flex-direction: column;
+    flex-direction: row;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Nova Square', cursive;
     font-family: 'Cinzel', serif;
-    font-family: 'Kelly Slab', cursive;
     font-size: 5em;
     position: fixed;
     bottom: 0;
-}
-.side-nav li{
-    padding: 0 10%;
-    
 }
