@@ -19,6 +19,13 @@ export default {
             {
                 test:/\.(s*)css$/,
                 use:['style-loader','css-loader', 'sass-loader']
+             },
+             {
+              test: /\.(svg)$/,
+              use: [{
+                loader: 'url-loader',
+                options: { limit: 10000 } // Convert images < 10k to base64 strings
+              }]
              }
      ]
   },
