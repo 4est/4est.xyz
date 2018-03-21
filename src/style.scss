@@ -26,7 +26,7 @@ body{
     text-align: center;
     overflow-x: hidden;
     margin: 0;
-
+    height: 100vh;
 
 
     h2{
@@ -37,40 +37,56 @@ body{
         letter-spacing: .1em;
     }
 }
-.bold{
-    color: #67788c;
-    color: #cec2ae;
-    color: #402f36;
-    color:#4a1210;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background-color: $background-color;
-}
-::-webkit-scrollbar-thumb {
-    background: $black-3; 
-}
 
 
-/*CSS GRID*/
-
-
-#header{
+#grid-container{
+    display: grid;
     height: 100vh;
-    display: none;
+    grid-template-rows: 13% 87%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "menu"
+    "grid-body";
+}
+.grid-body{
+    grid-area: grid-body;
+}
+.menu{
+    grid-area: menu;
+}
 
-    .logo{
-        background: url('logo.svg') no-repeat center center;
-        height: 60%;
+.logo{
+    background: url('logo.svg') no-repeat center center;
+    height: 60%;
+    margin-top: 7%;
+}
+#home-button{
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    background-color: $black-3;
+    width: 100px;
+    transform: skew(-45deg);
+    padding: 50px;
+    color: $white-1;
+    text-decoration: none;
+
+    .home{
+        transform: skew(45deg);
     }
 
+    &:hover{
+        background-color: $black-4;
+        color: $white-3;
+    }
+}
+#header{
+    display: none;
+    height: 100%;
 }
 
 #about{
-    height: 100vh;
+    height: 90vh;
     text-align: left;
     padding: 0 5vw;
     display: grid;
@@ -95,7 +111,6 @@ body{
         grid-area:bio;
     }
 }
-
 
 
 #xp{
@@ -154,23 +169,41 @@ body{
     }
 }
 .active-page{
-    display: block !important;
+    display: grid !important;
  }
 
 
 #footer{
-    grid-area: footer;
-    display: none;
     height: 10vh;
 }
 
 .menu{
     display: flex; 
     flex-direction: row;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Nova Square', cursive;
     font-family: 'Cinzel', serif;
-    font-size: 5em;
-    position: fixed;
-    bottom: 0;
+    font-size: 7em;
+    justify-content: center;
+
+    a{
+        display: inline-flex;
+        text-decoration: none;
+        color: $font-color;
+        margin:0 auto;
+
+        &:hover {
+            color:$red-color;
+        }
+    }
 }
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: $background-color;
+}
+::-webkit-scrollbar-thumb {
+    background: $black-3; 
+}
+
