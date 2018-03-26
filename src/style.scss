@@ -96,7 +96,7 @@ body{
         &#IV:hover:after{
             content: 'Contact';
             position: relative;
-            left: -85px;
+            left: -105px;
         }
         &.active-tab{
             color:$red-color;
@@ -111,10 +111,10 @@ body{
                 left: -50px;
     
             }
-            &#IV:hover:before{
+            &#IV:hover:after{
                 content: 'Contact';
                 position: relative;
-                left: -105px;
+                left: -125px;
             }
         }
     }
@@ -130,7 +130,8 @@ body{
     bottom: 0;
     left: -75px;
     background-color: $black-3;
-    width: 200px;
+    width: 8%;
+    min-width: 100px;
     transform: skew(45deg);
     padding: 50px;
     color: $white-1;
