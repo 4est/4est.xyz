@@ -16,10 +16,10 @@ function router(e){
             document.getElementById("xp").classList.add("active-page");
         } else if(e.target.id === 'III'){
             e.target.classList.add("active-tab");
-            document.getElementById("projects").classList.add("active-page");
+            document.getElementById("skills").classList.add("active-page");
         } else if(e.target.id === 'IV'){
             e.target.classList.add("active-tab");
-            document.getElementById("skills").classList.add("active-page");
+            document.getElementById("contact").classList.add("active-page");
         }
     }else if(e.target.className == "home-button"){
         clearActives();

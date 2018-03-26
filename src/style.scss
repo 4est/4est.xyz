@@ -88,13 +88,13 @@ body{
             position: relative;
             left: -20px;
         }
-        &#III:hover:before{
-            content: 'Projects';
-            position: relative;
-            left: -140px;
-        }
-        &#IV:hover:before{
+        &#III:hover:after{
             content: 'Skills';
+            position: relative;
+            left: -80px;
+        }
+        &#IV:hover:after{
+            content: 'Contact';
             position: relative;
             left: -85px;
         }
@@ -112,7 +112,7 @@ body{
     
             }
             &#IV:hover:before{
-                content: 'Skills';
+                content: 'Contact';
                 position: relative;
                 left: -105px;
             }
@@ -126,7 +126,7 @@ body{
     margin-top: 7%;
 }
 .home-button{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: -75px;
     background-color: $black-3;
@@ -148,7 +148,7 @@ body{
     }
 }
 #shape-1{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: -200px;
     background-color: $black-2;
@@ -190,17 +190,62 @@ body{
     }
     .bio{
         grid-area:bio;
+        font-size: 2.5em;
     }
 }
 
 
 #xp{
     margin: -20px;
+    display: grid;
     display: none;
-}
+    grid-template-columns: 20% 15% 1fr 20%;
+    grid-template-rows: 5% 1fr 1fr;
+    grid-template-areas: 
+    ". xp-title xp-title ."
+    ". work-title work ."
+    ". edu-title education .";
+    // ". projects-title projects .";
 
-#projects{
-    display: none;
+    .xp-title{
+        grid-area: xp-title;
+    }
+    .work{
+        grid-area: work;
+        font-size: 1.7em;
+        text-align: left;
+        margin: 50px 0;
+    }
+    .education{
+        grid-area: education;
+        font-size: 1.7em;
+        text-align: left;
+        margin: 50px 0;
+    }
+    .projects{
+        grid-area: projects;
+        font-size: 1.7em;
+        text-align: left;
+        margin: 50px 0;
+    }
+    .work-title{
+        grid-area: work-title;
+        font-size: 2em;
+        margin: 50px 0;
+    }       
+    .edu-title{
+        grid-area: edu-title;
+        font-size: 2em;
+        margin: 50px 0;
+    }
+    .projects-title{
+        grid-area: projects-title;
+        font-size: 2em;
+        margin: 50px 0;
+    }
+    h4{
+        margin: 0;
+    }
 }
 
 #skills{
@@ -242,6 +287,12 @@ body{
         grid-area: other;
     }
 }
+
+#contact{
+    display: none;
+}
+
+
 .active-page{
     display: grid !important;
  }
