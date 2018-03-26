@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel|Raleway|Nova+Square|Oswald);
+@import url(https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css);
 
 $black-1: #212121;
 $black-2: #2e2e2e;
@@ -268,24 +269,30 @@ body{
       }
       .html{
           grid-area: html;
+          font-size: 5em;
       }
       .css{
         grid-area: css;
+        font-size: 5em;
     
     }
     .js{
         grid-area: js;
+        font-size: 5em;
     
     }
     .backend{
         grid-area: backend;
+        font-size: 5em;
     
     }
     .tools{
         grid-area: tools;
+        font-size: 5em;
     }
     .other{
         grid-area: other;
+        font-size: 5em;
     }
 }
 
