@@ -67,13 +67,14 @@ body{
     a{
         display: inline-flex;
         text-decoration: none;
-        color: #fff;
+        color: $black-1;
         margin:0 auto;
         width: 100px;
-        text-shadow: 0px 2px 6px #8d8d8d;
+        text-shadow: 0px 2px 2px #8d8d8d;
 
         &:hover {
             color:$red-color;
+            
             
         }
         &:hover span{
