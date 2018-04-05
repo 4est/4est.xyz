@@ -130,15 +130,15 @@ body{
     position: fixed;
     bottom: 0;
     left: -75px;
-    background-color: $black-3;
+    background-color: $white-1;
     width: 8%;
     min-width: 100px;
     transform: skew(45deg);
     padding: 50px;
-    color: $white-1;
+    color: $black-1;
     text-decoration: none;
     text-align: right;
-    box-shadow: 3px 2px 25px $black-1;
+    box-shadow: 3px 2px 25px #d5d5d5;
 
     .home{
         transform: skew(-45deg);
@@ -153,17 +153,18 @@ body{
     position: fixed;
     bottom: 0;
     left: -200px;
-    background-color: $black-2;
+    background-color: #ededed;
     width: 13%;
-    height: 30%;
+    height: 20%;
     transform: skew(45deg);
     padding: 50px;
     z-index: -1;
     text-decoration: none;
     text-align: right;
-    box-shadow: inset -7px 25px 20px $black-1;
+    box-shadow: inset -7px 25px 20px #E2E2E2;
 
 }
+
 #header{
     display: none;
     height: 100%;
@@ -253,46 +254,43 @@ body{
 #skills{
     display: grid;
     display: none;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". .  skills-title skills-title . ."
-    "html css js backend tools other"
-    "html css js backend tools other"
-    "html css js backend tools other"
-    "html css js backend tools other"
-    "html css js backend tools other";
+    " . . skills-title . ."
+    "css js backend tools other"
+    "css js backend tools other"
+    "css js backend tools other"
+    "css js backend tools other"
+    "css js backend tools other";
 
 
     .skills-title {
         grid-area: skills-title;
       }
-      .html{
-          grid-area: html;
-          font-size: 5em;
-      }
+
       .css{
         grid-area: css;
-        font-size: 5em;
+        font-size: 4em;
     
     }
     .js{
         grid-area: js;
-        font-size: 5em;
+        font-size: 4em;
     
     }
     .backend{
         grid-area: backend;
-        font-size: 5em;
+        font-size: 4em;
     
     }
     .tools{
         grid-area: tools;
-        font-size: 5em;
+        font-size: 4em;
     }
     .other{
         grid-area: other;
-        font-size: 5em;
+        font-size: 4em;
     }
 }
 
