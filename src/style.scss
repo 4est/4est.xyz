@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Cinzel|Raleway|Nova+Square|Oswald);
 @import url(https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css);
 
+$fa-font-path: "~font-awesome/fonts";
+@import 'node_modules/font-awesome/scss/font-awesome.scss';
+
 $black-1: #212121;
-$black-2: #2e2e2e;
+$black-2: #2e2e2e;  
 $black-3: #3b3b3b;
 $black-4: #474747;
 $white-1: #f8f8f8;
@@ -34,8 +37,6 @@ body{
 
 
     h2{
-        font-family: 'Oswald', sans-serif;
-        font-family: 'Cinzel', serif;
         font-family: 'Nova Square', cursive;
         font-size:4em;
         letter-spacing: .1em;
@@ -49,7 +50,7 @@ body{
     grid-template-rows: 13% 87%;
     grid-template-columns: auto;
     grid-template-areas: 
-    "menu"
+    "menu"  
     "grid-body";
 }
 .grid-body{
@@ -141,6 +142,8 @@ body{
     text-decoration: none;
     text-align: right;
     box-shadow: 3px 2px 25px #d5d5d5;
+    font-size: 48px;
+    font-family: 'Nova Square', cursive;
 
     .home{
         transform: skew(-45deg);
@@ -298,6 +301,18 @@ body{
 
 #contact{
     display: none;
+    .flex-wrap{
+        i{
+            font-size: 6em;
+            color: $black-2;  
+            padding: 15px;
+
+            &:hover{
+                color: $red-color;
+            }
+        }
+    }
+
 }
 
 

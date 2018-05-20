@@ -26,7 +26,17 @@ export default {
                 loader: 'url-loader',
                 options: { limit: 10000 } // Convert images < 10k to base64 strings
               }]
-             }
+             },
+             {
+              test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+              use: [{
+                loader: 'file-loader',
+                options: {
+                  name: '[name].[ext]',
+                  outputPath: 'fonts/',    // where the fonts will go
+                }
+              }]
+            }
      ]
   },
 }

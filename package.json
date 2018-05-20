@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Hey I'm Forrest, here's my site\r http://4est.xyz",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
