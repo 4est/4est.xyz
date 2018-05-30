@@ -9,8 +9,8 @@ export default {
   ],
 
   output: {
-    path: path.resolve(__dirname, 'src'),
-    publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '',
     filename: 'bundle.js'
   },
 
@@ -28,15 +28,11 @@ export default {
               }]
              },
              {
-              test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-              use: [{
-                loader: 'file-loader',
-                options: {
-                  name: '[name].[ext]',
-                  outputPath: 'fonts/',    // where the fonts will go
-                }
-              }]
+               test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader'
+                }]
             }
-     ]
+     ],
   },
 }
